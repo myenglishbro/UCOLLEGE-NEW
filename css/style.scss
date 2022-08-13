@@ -13,6 +13,7 @@ $color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
  {
       background-color: transparent;
       background-image: $color-paleta;
+   
       
    
      
@@ -422,4 +423,24 @@ $color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
  
  }
  
- 
+.fondito-cards{
+  background-image: url(../images/22.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  border:none;
+}
+.fondito-cards2{
+   background-image: url(../images/21.webp);
+   background-repeat: no-repeat;
+   background-position: center;
+   color: white;
+   border:none;
+ }
+ .fondito-cards3{
+   background-image: url(../images/23.webp);
+   background-repeat: no-repeat;
+   background-position: center;
+   color: white;
+   border:none;
+ }
