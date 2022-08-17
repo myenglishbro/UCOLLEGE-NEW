@@ -1,38 +1,72 @@
 
+ body{
+   background-color: #F2F2F2;
+ }
+
+ .section-1{
+  background-color: white;
+  border-radius: 13px;
+  box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+
+ }
+
+ 
+ 
+ 
+ /* CREANDO UN MAPA DE PALETA DE COLORES */
+ $paleta-colores:(
+   principal:linear-gradient(130deg,#C72127 0%,#621013 89%),
+   secundario:rgb(224, 144, 24),
+   terciario: rgb(255, 255, 219)
+   );
+
+  
+  
+  
+ /* CREANDO UN MIXIN CON PARAMETROS*/
+@mixin tamaños ($width,$height)
+ { 
+   width: $width;
+   height: $height;
+} 
+ 
  /* CREANDO MI VARIABLE COLOR DE PALETA DE SECCIONES*/
-$color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
+$color-paleta:map-get($paleta-colores , principal);
 
 .titulo{
-    font-family: poppins,Sans-serif;
+   font-family: 'Poppins', sans-serif;
+    color:black;
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+ }
+
+ .subtitulo{
+    font-size: 20px;
+    line-height: 1.25;
  }
  .logo{
      height: 40px;
  }
  
- .navbar-custom
- {
-      background-color: transparent;
-      background-image: $color-paleta;
-   
-      
-   
-     
-  }
- 
   .section-custom{
-      background-color: transparent;
-      background-image: $color-paleta;
-     
-   }
+   background-color: white;
+   border-radius: 13px;
+ }
+   .frase{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+   }  
+  
   #footer{
     background: url(images/bg-04.png);
-    background-color: rgb(224, 144, 24);
+    background-color: map-get($paleta-colores, secundario );
     background-size: 50px 50px;
   }
  
   #opiniones{
     background: url(images/bg-04.png);
-    background-color: rgb(255, 255, 219);
+    background-color: map-get($paleta-colores, terciario );
     background-size: 50px 50px;
   }
  
@@ -54,12 +88,40 @@ $color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
     border-radius: 20px;
     transition: all ease-out 0.2s;
     overflow: hidden;
+    background-color: #e1f0e6;
 
     &:hover
     {
         transform: scale(1.05);
      }
  }
+ .card-border2
+ {
+    border:solid 10px white;
+    border-radius: 20px;
+    transition: all ease-out 0.2s;
+    overflow: hidden;
+    background-color: #ffe8db;
+
+    &:hover
+    {
+        transform: scale(1.05);
+     }
+ }
+ .card-border3
+ {
+    border:solid 10px white;
+    border-radius: 20px;
+    transition: all ease-out 0.2s;
+    overflow: hidden;
+    background-color: #ffecbd;
+
+    &:hover
+    {
+        transform: scale(1.05);
+     }
+ }
+ 
  
  
  
@@ -83,8 +145,8 @@ $color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
         {
             img{
                 border-radius: 100%;
-                height: 10em; 
-                width: 10em; 
+                /* USANDO MI MIXING CON PARAMETROS*/
+                @include tamaños(10em,10em);
                 margin-bottom: 25px; 
             }
         }
@@ -309,8 +371,7 @@ $color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
        }
        
        .cursos img {
-          width: 100%;
-          height: 100%;
+         @include tamaños(100%,100% );
           object-fit: cover;
          ;
            transition: all 2s;
@@ -344,6 +405,7 @@ $color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
           display: grid;
           grid-template-columns: 1;
           grid-gap: 20px; 
+         
        }
  
        .articulo-curso {
@@ -422,7 +484,7 @@ $color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
      }
  
  }
- 
+ /* HACIENDO USO DE EXTEND PARA USAR PROPIEDADES DE LA CLASE BASE*/
 .fondito-cards{
   background-image: url(../images/22.webp);
   background-repeat: no-repeat;
@@ -432,15 +494,10 @@ $color-paleta:linear-gradient(130deg,#C72127 0%,#621013 89%);
 }
 .fondito-cards2{
    background-image: url(../images/21.webp);
-   background-repeat: no-repeat;
-   background-position: center;
-   color: white;
-   border:none;
+    @extend .fondito-cards
  }
  .fondito-cards3{
    background-image: url(../images/23.webp);
-   background-repeat: no-repeat;
-   background-position: center;
-   color: white;
-   border:none;
+   @extend .fondito-cards
+   
  }

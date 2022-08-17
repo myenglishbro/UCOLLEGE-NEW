@@ -1,20 +1,41 @@
+body {
+  background-color: #F2F2F2;
+}
+
+.section-1 {
+  background-color: white;
+  border-radius: 13px;
+  box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+/* CREANDO UN MAPA DE PALETA DE COLORES */
+/* CREANDO UN MIXIN CON PARAMETROS*/
 /* CREANDO MI VARIABLE COLOR DE PALETA DE SECCIONES*/
 .titulo {
-  font-family: poppins, Sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 40px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+.subtitulo {
+  font-size: 20px;
+  line-height: 1.25;
 }
 
 .logo {
   height: 40px;
 }
 
-.navbar-custom {
-  background-color: transparent;
-  background-image: linear-gradient(130deg, #C72127 0%, #621013 89%);
+.section-custom {
+  background-color: white;
+  border-radius: 13px;
 }
 
-.section-custom {
-  background-color: transparent;
-  background-image: linear-gradient(130deg, #C72127 0%, #621013 89%);
+.frase {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 #footer {
@@ -67,8 +88,31 @@
   border-radius: 20px;
   transition: all ease-out 0.2s;
   overflow: hidden;
+  background-color: #e1f0e6;
 }
 .card-border:hover {
+  transform: scale(1.05);
+}
+
+.card-border2 {
+  border: solid 10px white;
+  border-radius: 20px;
+  transition: all ease-out 0.2s;
+  overflow: hidden;
+  background-color: #ffe8db;
+}
+.card-border2:hover {
+  transform: scale(1.05);
+}
+
+.card-border3 {
+  border: solid 10px white;
+  border-radius: 20px;
+  transition: all ease-out 0.2s;
+  overflow: hidden;
+  background-color: #ffecbd;
+}
+.card-border3:hover {
   transform: scale(1.05);
 }
 
@@ -84,8 +128,9 @@
 }
 .novedades .acerca-de img {
   border-radius: 100%;
-  height: 10em;
+  /* USANDO MI MIXING CON PARAMETROS*/
   width: 10em;
+  height: 10em;
   margin-bottom: 25px;
 }
 .novedades .bio {
@@ -311,7 +356,8 @@
     padding-top: 10px;
   }
 }
-.fondito-cards {
+/* HACIENDO USO DE EXTEND PARA USAR PROPIEDADES DE LA CLASE BASE*/
+.fondito-cards, .fondito-cards3, .fondito-cards2 {
   background-image: url(../images/22.webp);
   background-repeat: no-repeat;
   background-position: center;
@@ -321,16 +367,8 @@
 
 .fondito-cards2 {
   background-image: url(../images/21.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  border: none;
 }
 
 .fondito-cards3 {
   background-image: url(../images/23.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  border: none;
 }/*# sourceMappingURL=style.css.map */
