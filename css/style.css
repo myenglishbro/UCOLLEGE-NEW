@@ -1,5 +1,10 @@
-body {
-  background-color: #F2F2F2;
+.inicial {
+  background-image: url(../images/finallll.png);
+  background-repeat: no-repeat;
+  background-position: 80%;
+  background-size: cover;
+  position: relative;
+  height: 350px;
 }
 
 .section-1 {
