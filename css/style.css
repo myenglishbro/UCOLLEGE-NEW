@@ -7,6 +7,15 @@
   height: 350px;
 }
 
+.inicial-2 {
+  background-image: url(../images/boot1.png);
+  background-repeat: no-repeat;
+  background-position: 80%;
+  background-size: cover;
+  position: relative;
+  height: 350px;
+}
+
 .section-1 {
   background-color: white;
   border-radius: 13px;
